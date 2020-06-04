@@ -3,7 +3,6 @@ import Radium from 'radium'
 import Line from './Line.js'
 import Page from './Page.js'
 import { HashRouter as Router, Route, Switch } from 'react-router-dom'
-import ScrollToTop from './ScrollToTop.js'
 
 const styles = {
   container: {
@@ -40,7 +39,7 @@ class App extends React.Component {
     );
   }
 
-
+  
 }
 
 export default Radium(App);

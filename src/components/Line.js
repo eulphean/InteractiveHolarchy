@@ -71,10 +71,12 @@ class Line extends React.Component {
   }
 
   componentDidMount() {
-    window.scrollTo({
-      top: 4000,
-      behavior: 'smooth'
-    });
+    setTimeout(() => {
+      window.scrollTo({
+        top: 4000,
+        behavior: 'smooth'
+      });
+    }, 500);
   }
 }
 

@@ -67,10 +67,13 @@ class Page extends React.Component {
   }
 
   componentDidMount() {
-    window.scrollTo({
-      top: 10000,
-      behavior: 'smooth'
-    });
+    // Create a timeout for 2 seconds before scrolling
+    setTimeout(() => {
+      window.scrollTo({
+        top: 10000,
+        behavior: 'smooth'
+      });
+    }, 500);
   }
 }
 
