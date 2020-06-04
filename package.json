@@ -2,7 +2,7 @@
   "name": "InteractiveHolarchy",
   "version": "0.1.0",
   "private": false,
-  "homepage": "",
+  "homepage": "http://amaykataria.com/InteractiveHolarchy/",
   "dependencies": {
     "gh-pages": "^2.1.1",
     "radium": "^0.26.0",
