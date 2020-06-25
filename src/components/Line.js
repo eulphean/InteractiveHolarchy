@@ -45,19 +45,13 @@ class Line extends React.Component {
     super(props);
     this.state={
     };
+    
+    this.lineDiv = React.createRef(); 
   }
 
   render() {
     return (
-      <div style={styles.container}>
-          <div style={styles.leftPrint}>
-            <img src={p1} alt={"p1"} />
-            <img src={p2} alt={"p2"} />
-            <img src={p3} alt={"p3"} />
-            <img src={p4} alt={"p4"} />
-            <img src={p5} alt={"p5"} />
-            <img src={p6} alt={"p6"} />
-          </div>
+      <div ref={this.lineDiv} style={styles.container}>
           <div style={styles.rightPrint}>
             <img src={pA} alt={"pA"} />
             <img src={pB} alt={"pB"} />
@@ -66,14 +60,25 @@ class Line extends React.Component {
             <img src={pE} alt={"pE"} />
             <img src={pF} alt={"pF"} />
           </div>
+          <div style={styles.leftPrint}>
+            <img src={p1} alt={"p1"} />
+            <img src={p2} alt={"p2"} />
+            <img src={p3} alt={"p3"} />
+            <img src={p4} alt={"p4"} />
+            <img src={p5} alt={"p5"} />
+            <img src={p6} alt={"p6"} />
+          </div>
       </div>
     );
   }
 
   componentDidMount() {
+    let divHeight = parseInt(this.lineDiv.current.clientHeight); 
+    console.log(divHeight);
+    console.log(divHeight);
     setTimeout(() => {
       window.scrollTo({
-        top: 4000,
+        top: divHeight,
         behavior: 'smooth'
       });
     }, 500);

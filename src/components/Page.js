@@ -37,11 +37,13 @@ class Page extends React.Component {
     super(props);
     this.state={
     };
+
+    this.pageDiv = React.createRef(); 
   }
 
   render() {
     return (
-      <div style={styles.container}>
+      <div ref={this.pageDiv} style={styles.container}>
         <img src={p1} alt={"p1"} />
         <img src={p2} alt={"p2"} />
         <img src={p3} alt={"p3"} />
@@ -69,12 +71,16 @@ class Page extends React.Component {
   componentDidMount() {
     // Create a timeout for 2 seconds before scrolling
     setTimeout(() => {
+      let divHeight = parseInt(this.pageDiv.current.clientHeight); 
+      console.log(divHeight);
       window.scrollTo({
-        top: 10000,
+        top: divHeight,
         behavior: 'smooth'
       });
     }, 500);
   }
+
+
 }
 
 export default Radium(Page);
